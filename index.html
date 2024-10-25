@@ -17,19 +17,13 @@
         td {
             width: 30px;
             height: 30px;
-            border: 1px solid black;
             text-align: center;
             vertical-align: middle;
+            font-weight: bold;
+            color: #555;
         }
-        input[type="text"] {
-            width: 30px;
-            height: 30px;
-            text-align: center;
-            border: none;
-        }
-        input[type="text"]:focus {
-            outline: none;
-            border: 1px solid blue;
+        .border-cell {
+            border: 1px solid black;
         }
         .clue {
             text-align: left;
@@ -42,166 +36,109 @@
             margin-top: 20px;
             text-align: left;
         }
+        .numbering {
+            font-size: 10px;
+            vertical-align: top;
+            text-align: left;
+            padding: 0;
+        }
+        input[type="text"] {
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            border: none;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        input[type="text"]:focus {
+            outline: none;
+            border: 1px solid blue;
+        }
+        .user-info {
+            display: inline-block;
+            margin-left: 20px;
+        }
+        .user-info label {
+            font-size: 14px;
+            margin-right: 5px;
+        }
+        .user-info input {
+            width: 150px;
+            margin-right: 10px;
+        }
     </style>
 </head>
 <body>
-    <h1>십자말풀이</h1>
+    <h1>십자말풀이
+        <div class="user-info">
+            <label for="name">이름:</label>
+            <input type="text" id="name" name="name">
+            <label for="organization">소속:</label>
+            <input type="text" id="organization" name="organization">
+        </div>
+    </h1>
 
     <table>
         <!-- 첫 번째 줄 -->
         <tr>
-            <td><input type="text" maxlength="1" id="a1"></td>
-            <td><input type="text" maxlength="1" id="a2"></td>
-            <td><input type="text" maxlength="1" id="a3"></td>
-            <td><input type="text" maxlength="1" id="a4"></td>
-            <td><input type="text" maxlength="1" id="a5"></td>
-            <td><input type="text" maxlength="1" id="a6"></td>
-            <td><input type="text" maxlength="1" id="a7"></td>
-            <td><input type="text" maxlength="1" id="a8"></td>
-            <td><input type="text" maxlength="1" id="a9"></td>
-            <td><input type="text" maxlength="1" id="a10"></td>
+            <td></td><td></td><td></td><td class="numbering">ⓐ</td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
         </tr>
         <!-- 두 번째 줄 -->
         <tr>
-            <td></td>
-            <td></td>
-            <td><input type="text" maxlength="1" id="b3"></td>
-            <td><input type="text" maxlength="1" id="b4"></td>
-            <td><input type="text" maxlength="1" id="b5"></td>
-            <td><input type="text" maxlength="1" id="b6"></td>
-            <td><input type="text" maxlength="1" id="b7"></td>
-            <td><input type="text" maxlength="1" id="b8"></td>
-            <td></td>
-            <td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td class="numbering">ⓑ</td><td></td><td></td>
         </tr>
         <!-- 세 번째 줄 -->
         <tr>
-            <td><input type="text" maxlength="1" id="c1"></td>
-            <td><input type="text" maxlength="1" id="c2"></td>
-            <td><input type="text" maxlength="1" id="c3"></td>
-            <td></td>
-            <td><input type="text" maxlength="1" id="c5"></td>
-            <td></td>
-            <td><input type="text" maxlength="1" id="c7"></td>
-            <td></td>
-            <td><input type="text" maxlength="1" id="c9"></td>
-            <td></td>
+            <td></td><td></td><td class="numbering">①</td><td class="border-cell"><input type="text" maxlength="1"></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
         </tr>
         <!-- 네 번째 줄 -->
         <tr>
-            <td></td>
-            <td></td>
-            <td><input type="text" maxlength="1" id="d3"></td>
-            <td></td>
-            <td><input type="text" maxlength="1" id="d5"></td>
-            <td></td>
-            <td><input type="text" maxlength="1" id="d7"></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
         </tr>
         <!-- 다섯 번째 줄 -->
         <tr>
-            <td><input type="text" maxlength="1" id="e1"></td>
-            <td></td>
-            <td><input type="text" maxlength="1" id="e3"></td>
-            <td></td>
-            <td><input type="text" maxlength="1" id="e5"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td class="numbering">②</td><td class="border-cell"><input type="text" maxlength="1"></td><td></td><td class="numbering">ⓒ</td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
         </tr>
         <!-- 여섯 번째 줄 -->
         <tr>
-            <td></td>
-            <td><input type="text" maxlength="1" id="f2"></td>
-            <td><input type="text" maxlength="1" id="f3"></td>
-            <td></td>
-            <td><input type="text" maxlength="1" id="f5"></td>
-            <td></td>
-            <td><input type="text" maxlength="1" id="f7"></td>
-            <td></td>
-            <td><input type="text" maxlength="1" id="f9"></td>
-            <td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
         </tr>
         <!-- 일곱 번째 줄 -->
         <tr>
-            <td><input type="text" maxlength="1" id="g1"></td>
-            <td></td>
-            <td><input type="text" maxlength="1" id="g3"></td>
-            <td></td>
-            <td><input type="text" maxlength="1" id="g5"></td>
-            <td></td>
-            <td><input type="text" maxlength="1" id="g7"></td>
-            <td></td>
-            <td><input type="text" maxlength="1" id="g9"></td>
-            <td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
         </tr>
         <!-- 여덟 번째 줄 -->
         <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td><input type="text" maxlength="1" id="h5"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td></td><td></td><td></td><td></td><td class="numbering">ⓔ</td>
+            <td></td><td></td><td></td><td></td><td></td>
         </tr>
         <!-- 아홉 번째 줄 -->
         <tr>
-            <td><input type="text" maxlength="1" id="i1"></td>
-            <td></td>
-            <td><input type="text" maxlength="1" id="i3"></td>
-            <td></td>
-            <td><input type="text" maxlength="1" id="i5"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td><input type="text" maxlength="1" id="i9"></td>
-            <td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td class="numbering">ⓕ</td><td></td><td></td>
         </tr>
         <!-- 열 번째 줄 -->
         <tr>
-            <td><input type="text" maxlength="1" id="j1"></td>
-            <td><input type="text" maxlength="1" id="j2"></td>
-            <td><input type="text" maxlength="1" id="j3"></td>
-            <td><input type="text" maxlength="1" id="j4"></td>
-            <td><input type="text" maxlength="1" id="j5"></td>
-            <td></td>
-            <td></td>
-            <td><input type="text" maxlength="1" id="j8"></td>
-            <td><input type="text" maxlength="1" id="j9"></td>
-            <td><input type="text" maxlength="1" id="j10"></td>
+            <td class="numbering">⑤</td><td class="border-cell"><input type="text" maxlength="1"></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+        </tr>
+        <!-- 열한 번째 줄 -->
+        <tr>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+        </tr>
+        <!-- 열두 번째 줄 -->
+        <tr>
+            <td class="numbering">⑥</td><td class="border-cell"><input type="text" maxlength="1"></td><td></td><td></td><td></td>
+            <td class="numbering">ⓖ</td><td></td><td></td><td></td><td></td>
         </tr>
     </table>
-
-    <div class="clue">
-        <h2>가로 낱말퍼즐</h2>
-        <p>① 안전신고/제안에 대한 포상 등급 중 하나로, 안전신고의 결과로 인명피해 예방 및 1억 이상의 재산 손실 예방에 기여한 자에게 수여되는 포상이름.</p>
-        <p>② 회사의 안전 수준 관리를 위해 국가항공안전프로그램의 체계 안에서 운영하는 시스템을 말한다.</p>
-        <p>③ 안전운항 회의체중 하나로, 회사의 안전관리에 대한 주요한 사항을 심의, 의결하기 위한 최고 수준의 회의체.</p>
-        <p>④ 안전보고제도 중 비밀보고의 경우 자율보고 활성화와 동기 부여를 위하여 익명성이 보장된다.</p>
-        <p>⑤ 안전보고제도 중 하나로 전 임직원은 항공안전, 보안 관계 법령에서 정한 보고대상, 인명 및 재산상의 손실 또는 피해를 보고한다.</p>
-        <p>⑥ 한국교통안전공단에서 운영하는 보고제도로 사고 발생의 위해요인을 발굴하여 예방적 안전관리를 위한 필수요소.</p>
-
-        <h2>세로 낱말퍼즐</h2>
-        <p>ⓐ 티웨이항공은 안전 및 보안 관련 보고서 제출, 위해요인 식별/관리 등의 활동을 데이터베이스화 할 수 있는 운영체계를 운영하고 있다.</p>
-        <p>ⓑ 안전신고 접수처 중 하나로 잠재적 위해요인을 보고할 수 있다.</p>
-        <p>ⓒ 비처벌 보고제도의 회사정책으로 사고와 비정상상황에 대한 보고 시 처벌하지 않는다.</p>
-        <p>ⓓ 티웨이항공의 안전보안실은 정책에 반영하여 선언문을 게시한다.</p>
-        <p>ⓔ 안전보고제도를 통해 사고를 예방하고 안전문화를 증진한다.</p>
-        <p>ⓕ 자율적으로 보고하는 제도를 일컫는다.</p>
-        <p>ⓖ 안전성과 모니터링 평가를 위한 척도로 운영한다.</p>
-    </div>
-
-    <div class="info">
-        <h3>퍼즐을 풀고 Google Forms로 제출해주세요!</h3>
-        <p><a href="YOUR_GOOGLE_FORM_LINK" target="_blank">여기를 클릭하여 답변을 제출하세요</a></p>
-    </div>
 </body>
 </html>
