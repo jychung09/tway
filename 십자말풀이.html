@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>십자말풀이</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        table {
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+        td {
+            width: 30px;
+            height: 30px;
+            border: 1px solid black;
+            text-align: center;
+            vertical-align: middle;
+        }
+        input[type="text"] {
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            border: none;
+        }
+        input[type="text"]:focus {
+            outline: none;
+            border: 1px solid blue;
+        }
+        .clue {
+            margin-top: 20px;
+            text-align: left;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>십자말풀이</h1>
+    <table>
+        <tr>
+            <td><input type="text" maxlength="1" id="a1"></td>
+            <td></td>
+            <td></td>
+            <td><input type="text" maxlength="1" id="b1"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="text" maxlength="1" id="b2"></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><input type="text" maxlength="1" id="c1"></td>
+            <td><input type="text" maxlength="1" id="c2"></td>
+            <td><input type="text" maxlength="1" id="c3"></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="text" maxlength="1" id="d1"></td>
+            <td></td>
+            <td><input type="text" maxlength="1" id="e1"></td>
+        </tr>
+    </table>
+    <div class="clue">
+        <h2>가로 낱말퍼즐</h2>
+        <p>① 안전신고/제안에 대한 포상 등급 중 하나로, 안전신고의 결과로 인명피해 예방 및 1억 이상의 재산 손실 예방에 기여한 자에게 수여되는 포상이름.</p>
+        <p>② 회사의 안전 수준 관리를 위해 운영하는 시스템으로, 영문으로 SMS(Safety Management System)라 칭함.</p>
+        <p>③ 안전운항 회의체 중 하나로, 회사의 안전관리에 대한 주요한 사항을 심의, 의결하는 최고 수준의 회의체이다.</p>
+
+        <h2>세로 낱말퍼즐</h2>
+        <p>ⓐ 티웨이항공은 안전 및 보안 관련 보고서 제출, 위해요인 식별/관리 등의 활동을 데이터베이스화 할 수 있는 운영체계인 TOPS를 운영.</p>
+        <p>ⓑ 안전신고 접수처 중 하나로, 사내 임직원이 식별한 잠재적 위해요인을 보고할 수 있는 이메일 주소.</p>
+        <p>ⓒ 비처벌 보고제도의 회사정책, 사람의 판단 및 절차상 수행과정에서의 정상적 실수를 인정하는 정책.</p>
+    </div>
+    
+    <button onclick="checkAnswers()">정답 확인</button>
+
+    <script>
+        function checkAnswers() {
+            // 정답 예시
+            const answers = {
+                a1: "안",
+                b1: "전",
+                b2: "관",
+                c1: "리",
+                c2: "시",
+                c3: "스",
+                d1: "템",
+                e1: "제"
+            };
+
+            let correct = true;
+            for (const [key, value] of Object.entries(answers)) {
+                const userInput = document.getElementById(key).value;
+                if (userInput !== value) {
+                    correct = false;
+                    document.getElementById(key).style.border = "2px solid red"; // 틀린 곳 빨간 테두리
+                } else {
+                    document.getElementById(key).style.border = "2px solid green"; // 맞춘 곳 초록 테두리
+                }
+            }
+
+            if (correct) {
+                alert("정답입니다!");
+            } else {
+                alert("다시 시도해보세요.");
+            }
+        }
+    </script>
+</body>
+</html>
